@@ -1,6 +1,6 @@
 ---
-title: "hello world"
-date: 2026-5-3 000:000:000 +0800
+title: hello world
+date: 2026-07-17 12:00:00 +0300
 categories: [HackTheBox Machines]
 tags: [HTB Machines]
 ---
