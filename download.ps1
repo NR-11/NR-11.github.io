@@ -1,12 +1,12 @@
-$PostFile = Get-ChildItem -Path "_posts" -Filter "*Hospital.md" | Select-Object -First 1
+$PostFile = Get-ChildItem -Path "_posts" -Filter "*Bastard.md" | Select-Object -First 1
 
 if (-not $PostFile) {
-    Write-Host "[x] Error: Could not find the Hospital markdown file in _posts folder." -ForegroundColor Red
+    Write-Host "[x] Error: Could not find the Basterd markdown file in _posts folder." -ForegroundColor Red
     exit
 }
 
 $MarkdownFile = $PostFile.FullName
-$TargetDir = "assets/img/hospital"
+$TargetDir = "assets/img/bastard"
 
 if (-not (Test-Path $TargetDir)) {
     New-Item -ItemType Directory -Force -Path $TargetDir | Out-Null
@@ -19,7 +19,7 @@ if ([string]::IsNullOrEmpty($Content)) {
     exit
 }
 
-$Pattern = '!\[(.*?)\]\((https://cdn-images-\d+\.medium\.com/.*?)\)'
+$Pattern = '!\[(.*?)\]\((https?://[^)\s]+)\)'
 $Matches = [regex]::Matches($Content, $Pattern)
 
 Write-Host "[+] Found $($Matches.Count) Medium images to download."
