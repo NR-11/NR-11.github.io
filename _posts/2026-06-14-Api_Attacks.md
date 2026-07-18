@@ -1,5 +1,5 @@
 ﻿---
-title: HackTheBox Api Attacks
+title: HackTheBox Api Attacks (Sills Assessment)
 date: 2026-06-14 12:00:00 +0300
 categories: [HackTheBox Skills Assessment , Web Penetration Tester Path]
 tags: [HTB Assessment , REST API , FFUF , SSRF , BOPLA , Excessive Data Exposure]
