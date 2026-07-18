@@ -1,12 +1,12 @@
-$PostFile = Get-ChildItem -Path "_posts" -Filter "*Bastard.md" | Select-Object -First 1
+$PostFile = Get-ChildItem -Path "_posts" -Filter "*api_attacks.md" | Select-Object -First 1
 
 if (-not $PostFile) {
-    Write-Host "[x] Error: Could not find the Basterd markdown file in _posts folder." -ForegroundColor Red
+    Write-Host "[x] Error: Could not find the API Attacks markdown file in _posts folder." -ForegroundColor Red
     exit
 }
 
 $MarkdownFile = $PostFile.FullName
-$TargetDir = "assets/img/bastard"
+$TargetDir = "assets/img/api_attacks"
 
 if (-not (Test-Path $TargetDir)) {
     New-Item -ItemType Directory -Force -Path $TargetDir | Out-Null
